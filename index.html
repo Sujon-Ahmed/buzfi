@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buzfi</title>
+  <link rel="icon" href="https://buzfi.com/public/uploads/all/SnzaTgBXNPLYUH9jG90jPhZ1VAS7HX0h7QBAOFcJ.png">
+  <link href="./dist/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+  <nav class="bg-blue-700 dark:bg-gray-900 pb-2 mb-5">
+    <div class="flex items-center justify-between">
+      <div class="w-[20%]">
+        <a href="" class="flex items-center justify-center relative">
+          <img src="./images/logo.png" class="absolute md:top-[-8px] h-8 ml-5 md:ml-0 top:[-10px]" alt="Logo" />
+        </a>
+      </div>
+      <div class="w-[80%]">
+        <ul class="flex items-center justify-between p-4 md:p-0 mt-4 font-medium md:space-x-8 text-slate-100">
+          <li class="hidden md:block">
+            <small>Become a</small>
+            <div class="flex items-center">
+              <a href="" class="hover:text-blue-400"><small class="px-2">
+                  <i class="fa fa-hand-point-right"></i> &nbsp;
+                  Seller
+                </small></a>
+              <a href="" class="hover:text-blue-400">
+                <small class="px-2">
+                  <i class="fa fa-handshake"></i> &nbsp;
+                  Affiliate
+                </small>
+              </a>
+            </div>
+            <!-- </a> -->
+          </li>
+          <li class="hidden md:block">
+            <form class="max-w-lg mx-auto">
+              <div class="flex">
+                <div class="relative w-full rounded">
+                  <input type="search" id="search"
+                    class="block w-[500px] h-[50px] p-[40px] z-20 text-sm text-gray-900 bg-gray-50 rounded border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                    placeholder="Search in Buzfi..." required />
+                  <button type="submit"
+                    class="absolute top-1 end-1 h-10 p-2.5 text-sm font-medium text-white bg-blue-800 rounded hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                      viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                    <span class="sr-only">Search</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </li>
+          <li class="hidden md:block pr-2">
+            <div class="flex">
+              <div class="flex gap-2 items-center px-2 cursor-pointer">
+                <i class="fa fa-heart"></i>
+                <div class="flex flex-col">
+                  <small class="text-xs">Reorders</small>
+                  <span class="text-sm hover:text-blue-400">My Items</span>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center border-x-2 px-3 cursor-pointer">
+                <i class="fa fa-user"></i>
+                <div class="flex flex-col">
+                  <small class="text-xs">Sign in</small>
+                  <span class="text-sm hover:text-blue-400">Account</span>
+                </div>
+              </div>
+              <div class="flex gap-2 items-center px-2 cursor-pointer">
+                <i class="fas fa-cart-plus"></i>
+                <div class="flex flex-col">
+                  <small class="text-xs">$0.00</small>
+                  <span class="text-sm hover:text-blue-400">(0 Items)</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="md:flex items-center justify-between hidden py-2">
+          <div class="">
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+              class="text-white focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs py-2.5 text-center inline-flex items-center hover:text-blue-400 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              type="button"><i class="fas fa-th-large"></i>&nbsp; Departments (See All) <svg class="w-2.5 h-2.5 ms-3"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-50 hover:block hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-auto dark:bg-gray-700">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                <li class="w-auto">
+                  <a href="#" class="px-4 py-2 hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-gray-600 dark:hover:text-white flex"><img
+                      src="./images/VQslawZQBQdvK4xrLil5vvWt4NFF7nPthi2FLcMg.svg" alt="" class="w-4 h-4 mr-1"> Computers
+                    &
+                    Laptops</a>
+                </li>
+                <li class="w-auto">
+                  <a href="#"
+                    class="px-4 py-2 hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-gray-600  dark:hover:text-white flex"><img
+                      src="./images/vx4KN8h5wVo0mqdHvrQiG5olnuchadzxvPUY7ic0.svg" alt="" class="w-4 h-4 mr-1"> Kids &
+                    Bady</a>
+                </li>
+                <li class="w-auto">
+                  <a href="#"
+                    class="px-4 py-2 hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-gray-600  dark:hover:text-white flex"><img
+                      src="./images/uZsem4a1RyOgVVO2h41RacXSL43t8J06e1VcyJIJ.svg" alt="" class="w-4 h-4 mr-1">
+                    Electronics</a>
+                </li>
+              </ul>
+            </div>
+            <a href="" class="text-xs text-white hover:text-blue-400 px-2"><i class="fas fa-shopping-basket"></i>&nbsp;
+              New
+              Trend</a>
+            <a href="" class="text-xs text-white hover:text-blue-400 px-2"><i class="fas fa-shopping-basket"></i>&nbsp;
+              Top
+              Products</a>
+          </div>
+          <div class="pr-2">
+            <a href="" class="text-xs text-white hover:text-blue-400 px-2"><i class="fas fa-university"></i>&nbsp;
+              Home</a>
+            <a href="" class="text-xs text-white hover:text-blue-400 px-2"><i class="fas fa-bolt"></i>&nbsp; Flash
+              Sale</a>
+            <a href="" class="text-xs text-white hover:text-blue-400 px-2"><i class="fas fa-trophy"></i>&nbsp; All
+              Brands</a>
+            <a href="" class="text-xs text-white hover:text-blue-400 px-2"><i class="fas fa-snowflake"></i>&nbsp; All
+              Categories</a>
+            <a href="" class="text-xs text-white hover:text-blue-400 px-2"><i class="fas fa-info-circle"></i>&nbsp;
+              About
+              Buzfi</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="px-10">
+    <!-- Banner Carousel -->
+    <div id="indicators-carousel" class="relative w-full mb-0 pb-0" data-carousel="static">
+      <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative overflow-hidden rounded-lg h-56">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./images/r1eaieFcku5tkRkeEKxLlFCOGKvQpW7q18fwsq4n.jpg"
+              class="absolute block rounded-lg w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./images/Dc1555HyrdLUIkoThVlOQXHYLj7n86F4Ka3d6Nnt.jpg"
+              class="absolute block rounded-lg w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./images/bMfAtv0VkPtDRDed5XOuHV3OtpC3yrp4WgA4D3Fr.jpg"
+              class="absolute block rounded-lg w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+          </div>
+        </div>
+
+        <!-- Slider controls -->
+        <button type="button"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 1 1 5l4 4" />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 9 4-4-4-4" />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards Category -->
+    <div class="py-4 grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div
+        class="max-w-full md:max-w-full mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+          <img class="p-4 transition duration-300 ease-in-out hover:scale-105 overflow-hidden"
+            src="./images/bFWwTQ0IrkeB5s17fClyEiYAALFv1fbEQI3yi9Ou.jpg" alt="" />
+        </a>
+      </div>
+      <div
+        class="max-w-full md:max-w-full mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center p-2">
+            <div class="">
+              <img src="./images/Star 4.png" alt="" />
+            </div>
+            <div class="ml-2">
+              <p class="text-slate-400">top category</p>
+              <p class="font-bold text-slate-950">Electronic Accessories</p>
+            </div>
+          </div>
+          <div class="flex items-center flex-col pr-2">
+            <i class="fas fa-long-arrow-alt-right"></i>
+            <a href="#" class="font-bold text-blue-500 cursor-pointer">see all</a>
+          </div>
+        </div>
+        <div class="">
+          <div class="flex flex-wrap">
+            <div class="w-1/2 p-2 relative flex items-center justify-start cursor-pointer">
+              <img class="rounded" src="./images/wOOZmfTwXVHe50SWo323zXD3resYXR6BNO7amNjg.jpg" alt="" />
+              <small class="absolute capitalize bottom-4 bg-slate-100 px-1 rounded text-slate-700 ml-2">cell
+                phones</small>
+            </div>
+            <div class="w-1/2 p-2 relative flex items-center justify-start cursor-pointer">
+              <img class="rounded" src="./images/Ns0gYBHOJIdEmCokOPtDUvdASszU57PzKXYIdGdO.jpg" alt="" />
+              <small class="absolute capitalize bottom-4 bg-slate-100 px-1 rounded text-slate-700 ml-2">TV &
+                Video</small>
+            </div>
+            <div class="w-1/2 p-2 relative flex items-center justify-start cursor-pointer">
+              <img class="rounded" src="./images/ypx744Z0dyzQYDzH6AhWlRhnnSsZtazv6ka5BPec.jpg" alt="" />
+              <small class="absolute capitalize bottom-4 bg-slate-100 px-1 rounded text-slate-700 ml-2">windows
+                laptops</small>
+            </div>
+            <div class="w-1/2 p-2 relative flex items-center justify-start cursor-pointer">
+              <img class="rounded" src="./images/SVMVCsgKXXExXFqQuIhcYeHpYaSX9fyxfWxpbyM8.jpg" alt="" />
+              <small class="absolute capitalize bottom-4 bg-slate-100 px-1 rounded text-slate-700 ml-2">smart
+                watch</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-full md:max-w-full mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center p-2">
+            <div class="">
+              <img src="./images/Star 4.png" alt="" />
+            </div>
+            <div class="ml-2">
+              <p class="text-slate-400">top category</p>
+              <p class="font-bold text-slate-950">Gadgets & Gear</p>
+            </div>
+          </div>
+          <div class="flex items-center flex-col pr-2">
+            <i class="fas fa-long-arrow-alt-right"></i>
+            <a href="#" class="font-bold text-blue-500 cursor-pointer">see all</a>
+          </div>
+        </div>
+        <div class="">
+          <div class="flex flex-wrap">
+            <div class="w-1/2 p-2 relative flex items-center justify-start cursor-pointer">
+              <img class="rounded" src="./images/pqkB2Epxc88HHO482beVxk6GZlIIoGED1Kjqg3x3.jpg" alt="" />
+              <small class="absolute capitalize bottom-4 bg-slate-100 px-1 rounded text-slate-700 ml-2">Mobile
+                Accessories</small>
+            </div>
+            <div class="w-1/2 p-2 relative flex items-center justify-start cursor-pointer">
+              <img class="rounded" src="./images/8mFMDO9ZajRKefxcF6EwDj7NrlX4lu3PROHazgOI.jpg" alt="" />
+              <small class="absolute capitalize bottom-4 bg-slate-100 px-1 rounded text-slate-700 ml-2">outdoor
+                gear</small>
+            </div>
+            <div class="w-1/2 p-2 relative flex items-center justify-start cursor-pointer">
+              <img class="rounded" src="./images/3vlfwMXY3a8aF2WsOCiduocmeYQby4rFy95qnkIr.jpg" alt="" />
+              <small class="absolute capitalize bottom-4 bg-slate-100 px-1 rounded text-slate-700 ml-2">home tech
+                gadgets</small>
+            </div>
+            <div class="w-1/2 p-2 relative flex items-center justify-start cursor-pointer">
+              <img class="rounded" src="./images/GR49nWwNW1BhQKLDQrPAfFvfzsyDFmdSOUZq5vQR.jpg" alt="" />
+              <small class="absolute capitalize bottom-4 bg-slate-100 px-1 rounded text-slate-700 ml-2">Gaming
+                Peripherals</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-full md:max-w-full mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#" class="overflow-hidden relative">
+          <img class="p-4 transition duration-300 ease-in-out hover:scale-105 overflow-hidden"
+            src="./images/uqo4YWOzLTlIqOJ0BQzu7lRc95V3QD2LEXsZ3bOK.jpg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Black products -->
+    <div class="py-4 flex sm:flex-row flex-col">
+      <div class="sm:w-[20%] relative flex items-center justify-center flex-col mx-auto">
+        <img src="./images/ya5BoDNxmdmRQKVC9BvTllbw3zcmsRJqZTjvQaVu 1.png"
+          class="h-[420px] rounded border-2 border-blue-500" alt="">
+        <span
+          class="w-6 h-7 p-4 flex items-center justify-center bg-blue-500 text-slate-100 rounded-bl-lg rounded-tr-sm absolute top-2 border-2 border-blue-500 right-0"><i
+            class="fa fa-bolt"></i></span>
+
+        <div class="absolute top-14 flex items-center justify-center gap-1 countdown-blackfriday">
+          <div class="bg-blue-500 text-slate-100 p-6 w-14 h-10 flex items-center justify-center flex-col">
+            <span class="days">00</span>
+            <small class="label text-xs">Days</small>
+          </div>
+          <div class="bg-blue-500 text-slate-100 p-6 w-14 h-10 flex items-center justify-center flex-col">
+            <span class="hours">00</span>
+            <small class="label text-xs">Hours</small>
+          </div>
+          <div class="bg-blue-500 text-slate-100 p-6 w-14 h-10 flex items-center justify-center flex-col">
+            <span class="minutes">00</span>
+            <small class="label text-xs">Minutes</small>
+          </div>
+          <div class="bg-blue-500 text-slate-100 p-6 w-14 h-10 flex items-center justify-center flex-col">
+            <span class="seconds">00</span>
+            <small class="label text-xs">Seconds</small>
+          </div>
+        </div>
+        <a href="" class="uppercase bg-blue-500 p-2 text-slate-100 font-semibold px-4 absolute rounded bottom-14">buy
+          now</a>
+      </div>
+      <div class="grid sm:grid-cols-5  sm:w-[80%]">
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3 mt-3 md:mt-0">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/05-438x355-1 3.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/product-offer-2 2.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/coffee-cup-mug-white-mug-98aeb6c9580019fcc8d5408192b8c454 2.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/9q85lva77u129rlqqsao3ld9oh-86f0c55218c88a1303e44ace679e9fbc 1.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/fp6 2.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/png-clipart-perfume-perfume-removebg-preview 1.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/image 22.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/image 23.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px]">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/pngegg (3) 2.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px]">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/image 25.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="flex items-center justify-center">
+      <img src="./images/220425004.png" alt=""
+        class="rounded h-[150px] w-full bg-cover" />
+    </div>
+
+    <!-- sale products -->
+    <div class="py-4 flex sm:flex-row flex-col">
+      <div class="sm:w-[20%] relative flex items-center justify-center flex-col mx-auto">
+        <img src="./images/sales-symbol-ribbon-printing-offers-13e60afe5a19bbd4a5aa8b0d2743c657 2.png"
+          class="w-full h-[420px] rounded bg-gray-200 border-2 border-blue-500" alt="">
+        <span
+          class="w-6 h-7 p-4 flex items-center justify-center bg-blue-500 text-slate-100 rounded-bl-lg rounded-tr-sm absolute top-2 right-0"><i
+            class="fa fa-bolt"></i></span>
+        <div class="absolute top-14 flex items-center justify-center gap-1 countdown">
+          <div class="bg-blue-500 text-slate-100 p-6 w-14 h-10 flex items-center justify-center flex-col">
+           <span class="days">00</span>
+            <small class="label text-xs">Days</small>
+          </div>
+          <div class="bg-blue-500 text-slate-100 p-6 w-14 h-10 flex items-center justify-center flex-col">
+            <span class="hours">00</span>
+            <small class="label text-xs">Hours</small>
+          </div>
+          <div class="bg-blue-500 text-slate-100 p-6 w-14 h-10 flex items-center justify-center flex-col">
+            <span class="minutes">00</span>
+            <small class="label text-xs">Minutes</small>
+          </div>          
+          <div class="bg-blue-500 text-slate-100 p-6 w-14 h-10 flex items-center justify-center flex-col">
+           <span class="seconds">00</span>
+            <small class="label text-xs">Seconds</small>
+          </div>
+        </div>
+        <a href="" class="uppercase bg-blue-500 p-2 text-slate-100 font-semibold px-4 absolute rounded bottom-14">buy
+          now</a>
+      </div>
+      <div class="sm:w-[80%] grid sm:grid-cols-5">
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/05-438x355-1 3.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/product-offer-2 2.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/coffee-cup-mug-white-mug-98aeb6c9580019fcc8d5408192b8c454 2.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/9q85lva77u129rlqqsao3ld9oh-86f0c55218c88a1303e44ace679e9fbc 1.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/fp6 2.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/png-clipart-perfume-perfume-removebg-preview 1.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/image 22.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px] mb-3">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/image 23.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px]">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/pngegg (3) 2.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 shadow hover:border-blue-500 mx-2 h-[205px]">
+          <a href="#" class="relative">
+            <img class="rounded mx-auto transition duration-300 ease-in-out hover:scale-110 overflow-hidden mt-1"
+              src="./images/image 25.png" alt="product image" />
+            <div class="absolute flex flex-col gap-2 top-2 right-2">
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span
+                class="w-10 h-10 bg-slate-400 p-2 flex items-center justify-center text-slate-200 hover:bg-blue-500">
+                <i class="fa fa-compress-alt"></i>
+              </span>
+            </div>
+          </a>
+          <div class="px-5 pb-5">
+            <a href="#">
+              <p class="text-gray-900 dark:text-white mt-8">
+                Apple Watch Nike SE (1st Gen) GPS...
+              </p>
+            </a>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-500 dark:text-white">$750.00</span>
+              <del class="text-slate-400">$850.00</del>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <section class="py-5 flex items-center justify-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="">
+          <img src="./images/image 88.png" class="rounded h-[200px]" alt="" />
+        </div>
+        <div class="">
+          <img src="./images/image 89.png" class="rounded h-[200px]" alt="" />
+        </div>
+        <div class="">
+          <img src="./images/Group 427319423.png" class="rounded h-[200px]" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4">
+      <div class="flex items-center justify-between py-5">
+        <h1 class="md:text-3xl text-2xl">Popular Products</h1>
+        <p class="text-blue-500 font-semibold cursor-pointer">See All</p>
+      </div>
+      <div class="grid md:grid-cols-4 grid-cols-1 gap-3">
+        <div class="border flex items-center p-3 cursor-pointer hover:shadow-2xl">
+          <div
+            class="py-3 p-0 mt-5 max-w-sm mx-auto space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class="block mx-auto h-24 sm:mx-0 sm:shrink-0" src="./images/528282416278.jpg" alt="" />
+            <div class="text-center space-y-2">
+              <div class="space-y-0.5 sm:text-left">
+                <p class="text-slate-700">
+                  Wholesale Knitted Headbands with bendable...
+                </p>
+                <span class="flex items-center justify-between">
+                  <p class="text-blue-500 font-semibold sm:text-xl">$499.00</p>
+                  <del class="text-slate-400">$520.00</del>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border flex items-center p-3 cursor-pointer hover:shadow-2xl">
+          <div
+            class="py-3 p-0 mt-5 max-w-sm mx-auto space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class="block mx-auto h-24 sm:mx-0 sm:shrink-0"
+              src="./images/Bentgo-4-Piece-Deluxe-Set-With-Insulated-Lunch-Bag-Ice-Packs-Bento-Classic-Blush_5110d552-274f-48e7-9445-29e35e1d34ea.60d3002e8d70e1cc33f836b1554951eb.webp"
+              alt="" />
+            <div class="text-center space-y-2">
+              <div class="space-y-0.5 sm:text-left">
+                <p class="text-slate-700">
+                  Bentgo 4-Piece Deluxe Set With Insulated L...
+                </p>
+                <span class="flex items-center justify-between">
+                  <p class="text-blue-500 font-semibold sm:text-xl">$499.00</p>
+                  <del class="text-slate-400">$520.00</del>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border flex items-center p-3 cursor-pointer hover:shadow-2xl">
+          <div
+            class="py-3 p-0 mt-5 max-w-sm mx-auto space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class="block mx-auto h-24 sm:mx-0 sm:shrink-0"
+              src="./images/2-Pack-8pc-Glass-Leak-Proof-Meal-Prep-Set-White-Stone_004c87eb-a53c-495a-94bc-acc0075fc1c9.c1f84a71510d1a96c46398fe19e782d6.webp"
+              alt="" />
+            <div class="text-center space-y-2">
+              <div class="space-y-0.5 sm:text-left">
+                <p class="text-slate-700">
+                  Bentgo 8-Piece Leak-Proof Glass Meal Prep...
+                </p>
+                <span class="flex items-center justify-between">
+                  <p class="text-blue-500 font-semibold sm:text-xl">$499.00</p>
+                  <del class="text-slate-400">$520.00</del>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border flex items-center p-3 cursor-pointer hover:shadow-2xl">
+          <div
+            class="py-3 p-0 mt-5 max-w-sm mx-auto space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class="block mx-auto h-24 sm:mx-0 sm:shrink-0"
+              src="./images/Bentgo-Kids-Leak-Proof-Lunch-Box-Water-Bottle-Set-Shark_dd647db2-47fb-42a3-aa45-ddd0e21b8ae0.f9fb722596d6afc16c765c146549259e.webp"
+              alt="" />
+            <div class="text-center space-y-2">
+              <div class="space-y-0.5 sm:text-left">
+                <p class="text-slate-700">
+                  Bentgo Kids Prints Lunch Box & Water Bottl...
+                </p>
+                <span class="flex items-center justify-between">
+                  <p class="text-blue-500 font-semibold sm:text-xl">$499.00</p>
+                  <del class="text-slate-400">$520.00</del>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border flex items-center p-3 cursor-pointer hover:shadow-2xl">
+          <div
+            class="py-3 p-0 mt-5 max-w-sm mx-auto space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class="block mx-auto h-24 sm:mx-0 sm:shrink-0"
+              src="./images/Bentgo-Kids-Chill-Lunch-Snack-Box-with-Removable-Ice-Pack-Purple_7743774c-2b16-4869-a24d-5a40a86a1995.2c50e544a7fadc12471c16a7672d962c.webp"
+              alt="" />
+            <div class="text-center space-y-2">
+              <div class="space-y-0.5 sm:text-left">
+                <p class="text-slate-700">
+                  Bentgo Kids Chill Lunch box+ Bentgo Kids S...
+                </p>
+                <span class="flex items-center justify-between">
+                  <p class="text-blue-500 font-semibold sm:text-xl">$499.00</p>
+                  <del class="text-slate-400">$520.00</del>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border flex items-center p-3 cursor-pointer hover:shadow-2xl">
+          <div
+            class="py-3 p-0 mt-5 max-w-sm mx-auto space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class="block mx-auto h-24 sm:mx-0 sm:shrink-0"
+              src="./images/Ello-Stratus-16oz-Tritan-Water-Bottle-3-Pack_717b3f0b-3dd7-462f-8ecb-9ab3d918b925.3b55e077ece113ab29e052a6f6c5c789.avif"
+              alt="" />
+            <div class="text-center space-y-2">
+              <div class="space-y-0.5 sm:text-left">
+                <p class="text-slate-700">
+                  Ello Stratus 16-Ounce Tritan Water Bottles...
+                </p>
+                <span class="flex items-center justify-between">
+                  <p class="text-blue-500 font-semibold sm:text-xl">$499.00</p>
+                  <del class="text-slate-400">$520.00</del>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border flex items-center p-3 cursor-pointer hover:shadow-2xl">
+          <div
+            class="py-3 p-0 mt-5 max-w-sm mx-auto space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class="block mx-auto h-24 sm:mx-0 sm:shrink-0"
+              src="./images/Ello-Kids-Bop-12-Oz-Tritan-Tumbler-3-Pack-Assorted-Colors_05b5daaa-8be0-4de5-82ee-74ba63743f3b.c984589c45c02838aacba42ca510e844.jpeg"
+              alt="" />
+            <div class="text-center space-y-2">
+              <div class="space-y-0.5 sm:text-left">
+                <p class="text-slate-700">
+                  Ello Kids Bop 12 oz Tritan Tumbler, 3 Pack...
+                </p>
+                <span class="flex items-center justify-between">
+                  <p class="text-blue-500 font-semibold sm:text-xl">$499.00</p>
+                  <del class="text-slate-400">$520.00</del>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border flex items-center p-3 cursor-pointer hover:shadow-2xl">
+          <div
+            class="py-3 p-0 mt-5 max-w-sm mx-auto space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img class="block mx-auto h-24 sm:mx-0 sm:shrink-0"
+              src="./images/Ello-Colby-14-Ounce-Tritan-Water-Bottle-Girls-Various-Colors-3-Pack_ce1930c0-c9c7-406d-88f0-40e9136434e5.78bd7115f963e3d353165abfe77b6358.webp"
+              alt="" />
+            <div class="text-center space-y-2">
+              <div class="space-y-0.5 sm:text-left">
+                <p class="text-slate-700">
+                  Ello Kids Colby 14-oz. Tritan Plastic Wate...
+                </p>
+                <span class="flex items-center justify-between">
+                  <p class="text-blue-500 font-semibold sm:text-xl">$499.00</p>
+                  <del class="text-slate-400">$520.00</del>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="">
+          <img src="./images/gX1ruKGnlNszU9E4tOSHmNHOxlQ1pyygBXzv1FsE.png" alt="" />
+        </div>
+        <div class="">
+          <img src="./images/WZcAnkVtexmRBgvExglzzcVRU7g9gFGSW9JKyZ8u.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="md:text-xl text-slate-700 absolute left-[23%] ml-[-60px] md:ml-0 mt-5 flex items-center justify-center">
+        <span class="font-semibold">Top Picks of This Category</span>
+      <div class="absolute right-[50px] mt-3">
+        <button class="pp2 bg-gray-300 p-3 h-12 w-12 mr-2 hover:bg-blue-500 hover:text-slate-100"><i
+            class="fa fa-arrow-left"></i></button>
+        <button class="nn2 bg-gray-300 p-3 h-12 w-12 hover:bg-blue-500 hover:text-slate-100"><i
+            class="fa fa-arrow-right"></i></button>
+      </div>
+      </p>
+      <div class="flex">
+        <div class="sm:w-[20%] w-full hidden sm:block">
+          <img src="./images/CMWHjIbTX0ZRfJE1G6VJSQtw56sX1Finqd0x4EFY.png" class="mt-3 cursor-pointer" alt="" />
+        </div>
+        <div class="px-1 gap-4 auto-play-pick-category sm:w-[80%] w-[80%] mt-12 pt-6">
+          <div class="border border-gray-200 shadow hover:border-blue-500 mx-2 relative" style="height: 345px;">
+            <a href="#" class="relative">
+              <img class="rounded mx-auto"
+                src="./images/lenovo-ideapad-slim-3i-15itl-11th-gen-intel-core-11670045412 3.png" style="width: 180px;"
+                alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 bottobottom-3 absolute">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 shadow hover:border-blue-500 mx-2 relative" style="height: 345px;">
+            <a href="#" class="relative">
+              <img class="rounded mx-auto" src="./images/image 26.png" style="width: 180px;" alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 bottom-3 absolute">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 shadow hover:border-blue-500 mx-2 relative" style="height: 345px;">
+            <a href="#" class="relative">
+              <img class="rounded mx-auto"
+                src="./images/lenovo-ideapad-slim-3i-15itl-11th-gen-intel-core-11670045412 3.png" style="width: 180px;"
+                alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 bottobottom-3 absolute">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 shadow hover:border-blue-500 mx-2 relative" style="height: 345px;">
+            <a href="#" class="relative">
+              <img class="rounded mx-auto" src="./images/image 26.png" style="width: 180px;" alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 bottom-3 absolute">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="border border-gray-200 shadow hover:border-blue-500 mx-2 relative" style="height: 345px;">
+            <a href="#" class="relative">
+              <img class="rounded mx-auto"
+                src="./images/lenovo-ideapad-slim-3i-15itl-11th-gen-intel-core-11670045412 3.png" style="width: 180px;"
+                alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 bottobottom-3 absolute">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="md:text-xl text-slate-700 absolute left-[23%] ml-[-60px] md:ml-0 mt-5 flex items-center justify-center">
+        <span class="font-semibold">Top Picks of This Category</span>
+      <div class="absolute right-[50px] mt-3">
+        <button class="pp2 bg-gray-300 p-3 h-12 w-12 mr-2 hover:bg-blue-500 hover:text-slate-100"><i
+            class="fa fa-arrow-left"></i></button>
+        <button class="nn2 bg-gray-300 p-3 h-12 w-12 hover:bg-blue-500 hover:text-slate-100"><i
+            class="fa fa-arrow-right"></i></button>
+      </div>
+      </p>
+      <div class="flex">
+        <div class="sm:w-[20%] w-full hidden sm:block mt-3">
+          <img src="./images/vWsyF2UfKCNTblq8DhT5bYXqGy4vlR644atPcEFJ.png" class="mt-3 cursor-pointer" alt="" />
+        </div>
+        <div class="px-1 gap-4 auto-play-pick-category w-[80%] mt-12 pt-6">
+          <div class="bg-white w-[180px] border border-gray-200 shadow hover:border-blue-500 mx-2"
+            style="height: 360px;">
+            <a href="#" class="relative">
+              <img class="rounded" src="./images/image 45.png" alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 bottom-0">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white w-[180px] border border-gray-200 shadow hover:border-blue-500 mx-2"
+            style="height: 360px;">
+            <a href="#" class="relative">
+              <img class="rounded" src="./images/image 37.png" alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white w-[180px] border border-gray-200 shadow hover:border-blue-500 mx-2"
+            style="height: 360px;">
+            <a href="#" class="relative">
+              <img class="rounded" src="./images/image 39.png" alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white w-[180px] border border-gray-200 shadow hover:border-blue-500 mx-2"
+            style="height: 360px;">
+            <a href="#" class="relative">
+              <img class="rounded" src="./images/image 47.png" alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white w-[180px] border border-gray-200 shadow hover:border-blue-500 mx-2"
+            style="height: 360px;">
+            <a href="#" class="relative">
+              <img class="rounded" src="./images/image 33.png" alt="product image" />
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-2 right-2">
+                <i data-tooltip-target="tooltip-animation-wishlist" data-tooltip-placement="left"
+                  class="fa fa-heart text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-wishlist" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to wishlist
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              <div
+                class="bg-gray-300 hover:bg-blue-500 z-10 p-3 w-10 h-10 cursor-pointer flex items-center justify-center absolute top-14 right-2">
+                <i data-tooltip-target="tooltip-animation-compare" data-tooltip-placement="left"
+                  class="fa fa-compress-alt text-gray-500 hover:text-slate-100"></i>
+                <div id="tooltip-animation-compare" role="tooltip"
+                  class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Add to compare
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </a>
+            <div class="px-5 pb-5">
+              <a href="#">
+                <p class="text-gray-900 dark:text-white py-3">
+                  Apple Watch Nike SE (1st Gen) GPS, 44mm Silver Aluminum ...
+                </p>
+              </a>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-blue-500 dark:text-white">$750.00</span>
+                <del class="text-slate-400">$850.00</del>
+              </div>
+              <div class="flex items-center justify-between">
+                <small class="text-red-500">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-slate-300"></i>
+                  <span class="pl-2 font-semibold">276</span>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4">
+      <div class="mx-auto">
+        <img src="./images/jT0Tyoohq5vgKoFGMib4tBVypyZl8ELaifMm7C2N.png" class="rounded mx-auto" alt="" />
+      </div>
+    </section>
+  </div>
+  <footer>
+    <section class="py-4">
+      <div class="">
+        <div class="bg-blue-400 p-1 grid grid-cols-1 md:grid-cols-4 sm:divide-x">
+          <div class="flex items-center justify-center py-3 sm:border-b-0 border-b-2 border-slate-300">
+            <img src="./images/safe.png" alt="" />
+            <p class="text-slate-100 font-semibold pl-3">
+              Safe and easy payments
+            </p>
+          </div>
+          <div class="flex items-center justify-center py-3 sm:border-b-0 border-b-2 border-slate-300">
+            <img src="./images/money-back.png" alt="" />
+            <p class="text-slate-100 font-semibold pl-3">Money-back policy</p>
+          </div>
+          <div class="flex items-center justify-center py-3 sm:border-b-0 border-b-2 border-slate-300">
+            <img src="./images/on-time.png" alt="" />
+            <p class="text-slate-100 font-semibold pl-3">On-time shipping</p>
+          </div>
+          <div class="flex items-center justify-center py-3">
+            <img src="./images/after-sales.png" alt="" />
+            <p class="text-slate-100 font-semibold pl-3">
+              After-sales protections
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4 bg-blue-700">
+      <div class="p-12 grid sm:grid-cols-5 gap-3 pb-5 mb-8">
+        <div class="text-slate-200">
+          <p class="text-[20px] mb-2 font-semibold">Customer Care</p>
+          <ul>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Dropshipping FAQ
+            </li>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Affiliate Marketing FAQ
+            </li>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              B2B/B2C Transactions
+            </li>
+          </ul>
+        </div>
+        <div class="text-slate-200">
+          <p class="text-[20px] mb-2 font-semibold">About Buzfi</p>
+          <ul>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Who we are
+            </li>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Management Team
+            </li>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Operation
+            </li>
+          </ul>
+        </div>
+        <div class="text-slate-200">
+          <p class="text-[20px] mb-2 font-semibold">Earn With Buzfi</p>
+          <ul>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Become An Affiliate
+            </li>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Become A Seller
+            </li>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              User Our CRM
+            </li>
+          </ul>
+        </div>
+        <div class="text-slate-200">
+          <p class="text-[20px] mb-2 font-semibold">Remain Connected</p>
+          <ul>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Get Newsletters
+            </li>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Remain Updated
+            </li>
+            <li class="cursor-pointer hover:translate-x-2 transition-all text-slate-300">
+              Apply For A Job
+            </li>
+          </ul>
+        </div>
+        <div class="text-slate-200">
+          <p class="text-[20px] mb-2 font-semibold">Mobile Versions</p>
+          <div class="flex">
+            <div class="">
+              <p class="font-semibold capitalize">user app</p>
+              <div class="flex gap-2 pt-1">
+                <img src="./images/playstore.png" alt="" class="w-[30px] cursor-pointer" />
+                <img src="./images/apple.png" alt="" class="w-[30px] cursor-pointer" />
+              </div>
+            </div>
+            <div class="ml-5">
+              <p class="font-semibold capitalize">seller app</p>
+              <div class="flex gap-2 pt-1">
+                <img src="./images/playstore.png" alt="" class="w-[30px] cursor-pointer" />
+                <img src="./images/apple.png" alt="" class="w-[30px] cursor-pointer" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="mx-auto w-1/2 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 mt-8" />
+      <div class="flex items-center justify-center">
+        <div
+          class="w-5 h-6 bg-slate-300 mx-1 p-5 flex items-center justify-center rounded text-blue-800 cursor-pointer transition-all hover:bg-blue-800 hover:text-slate-100">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <div
+          class="w-5 h-6 bg-slate-300 mx-1 p-5 flex items-center justify-center rounded text-blue-800 cursor-pointer transition-all hover:bg-blue-800 hover:text-slate-100">
+          <i class="fab fa-linkedin"></i>
+        </div>
+        <div
+          class="w-5 h-6 bg-slate-300 mx-1 p-5 flex items-center justify-center rounded text-orange-500 cursor-pointer transition-all hover:bg-orange-500 hover:text-slate-100">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <div
+          class="w-5 h-6 bg-slate-300 mx-1 p-5 flex items-center justify-center rounded text-slate-500 cursor-pointer transition-all hover:bg-blue-500 hover:text-slate-100">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div
+          class="w-5 h-6 bg-slate-300 mx-1 p-5 flex items-center justify-center rounded text-red-600 cursor-pointer transition-all hover:bg-red-600 hover:text-slate-100">
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </section>
+    <div class="p-6 bg-gray-800 flex items-center md:justify-between flex-wrap justify-center">
+      <p class="text-slate-100 mb-5 md:mb-0">
+        © 2024 <a href="" class="text-blue-500 cursor-pointer">Buzfi</a> All
+        Rights Reserved
+      </p>
+      <img src="./images/card.png" class="cursor-pointer" alt="" />
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+    integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- custom scripts -->
+  <script>
+    const countDownDate = new Date("Mar 27, 2025 15:37:25").getTime();
+    if (document.querySelector('.countdown')) {
+      const countdown = document.querySelector('.countdown');
+      const dayscontainer = countdown.querySelector('.days');
+      const hourscontainer = countdown.querySelector('.hours');
+      const minutescontainer = countdown.querySelector('.minutes');
+      const secondscontainer = countdown.querySelector('.seconds');
+
+      const startCountdown = () => {
+        const timer = setInterval(function () {
+
+          // Get today's date and time
+          let now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          let distance = countDownDate - now;
+
+          if (distance < 0) {
+            countdown.remove()
+            clearInterval(timer);
+          }
+
+          // Time calculations for days, hours, minutes and seconds
+          let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="demo"
+          dayscontainer.innerHTML = days;
+          hourscontainer.innerHTML = hours;
+          minutescontainer.innerHTML = minutes;
+          secondscontainer.innerHTML = seconds;
+
+        }, 1000);
+      }
+
+
+      startCountdown();
+    }
+
+  </script>
+
+  <script>
+    $(".auto-play-pick-category").slick({
+      dots: false,
+      arrows: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      prevArrow: $(".pp2"),
+      nextArrow: $(".nn2"),
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ],
+    });
+  </script>
+</body>
+
+</html>
