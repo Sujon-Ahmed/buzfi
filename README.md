@@ -1,6 +1,6 @@
 ## Project: Buzfi With TailwindCSS
 
-How can run this project ?
+# Project Setup Process
 
 - Step1
 ```terminal
@@ -11,9 +11,5 @@ git clone https://github.com/Sujon-Ahmed/buzfi.git
 ```
 npm install
 ```
-
-- Step3
-
--> Project `src/index.html` file open in browser
 
 
