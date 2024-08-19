@@ -1,6 +1,6 @@
 ## Project: Buzfi With TailwindCSS
 
-# Project Setup Process
+### Project Setup Process
 
 - Step1
 ```terminal
